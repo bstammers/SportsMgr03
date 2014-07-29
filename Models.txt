@@ -1,0 +1,88 @@
+COMPETITION
+	- name
+	- manager
+	- sport
+	- location
+	- points percentage flag
+	- sets percentage flag
+	- mvp flag
+	--- HAS MANY DIVISIONS
+	--- HAS MANY PLAYERS
+	
+DIVISION
+	- name
+	--- HAS MANY TEAMS
+	--- HAS ONE DRAW
+	--- HAS ONE LADDER
+	--- BELONGS TO COMPETITION
+	
+TEAM
+	- name
+	- captain
+	- secondary contact
+	- games played
+	- games won
+	- games lost
+	- games drawn
+	- sets won
+	- sets lost
+	- sets tied
+	- points for
+	- points against
+	- points percentage
+	- sets for
+	- sets against
+	- sets percentage
+	- competition points
+	--- HAS MANY PLAYERS
+	--- BELONGS TO DIVISION
+	
+PLAYER
+	- first name
+	- last name
+	- username
+	- phone
+	- email
+	- password
+	- avatar
+	- admin user flag
+	- team manager flag
+	--- BELONGS TO TEAM
+	--- BELONGS TO COMPETITION  (single players)
+	
+DRAW
+	- start date
+	- end date
+	--- BELONGS TO DIVISION
+	--- HAS MANY ROUNDS
+	--- HAS MANY MATCHES
+	
+ROUND
+	- round no
+	- round date
+	--- BELONGS TO DRAW
+	--- HAS MANY MATCHES
+	
+MATCH
+	- round no   	
+	- date			
+	- team 1		
+	- team 2		
+	- court			
+	- time			
+	- team 1 points
+	- team 2 points
+	- team 1 sets
+	- team 2 sets
+	- MVP
+	- team 1 fees
+	- team 2 fees
+	--- BELONGS TO ROUND
+	--- HAS MAY MATCHSETS
+	
+MATCHSET
+	- team 1 points
+	- team 2 points
+	- winner
+	--- BELONGS TO MATCH
+	

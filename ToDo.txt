@@ -1,0 +1,28 @@
+DONE		A.  Create models
+			B.  Test models in console using sample data...test that associations work correctly by creating all objects
+				1.  Create rspec tests??
+			C.  Create controllers for each model
+				1.  competition
+				2.	division
+				3.	team
+				4.	player
+				5.	draw
+				6.	round
+				7.	match
+				8.	match set
+			D.	Create basic views for all models
+				1.  competition
+				2.	division
+				3.	team
+				4.	player
+				5.	draw
+				6.	round
+				7.	match
+				8.	match set
+			E.	Define user authentication and authorisation
+				1.	set up user login page
+				2.	create authentication process
+				3.	set up user registration page
+			F.	Set up user dashboard/home page
+			G.	Set up admin user dashboard/home page
+			 	
